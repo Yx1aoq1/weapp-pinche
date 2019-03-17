@@ -1,0 +1,77 @@
+<view class="top-tips-warn bg-red" wx:if="{{showTopTips}}">{{errorMsg}}</view>
+
+<form bindsubmit="bindSubmit">
+  <view class="text-lg padding text-grey">确认联系人方式</view>
+  <view class="cu-form-group">
+    <view class="title">姓名</view>
+    <input name="name" placeholder="请输入姓名" value="{{editForm.name}}" class="radius"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">性别</view>
+    <picker name="sex" value="{{editForm.sex}}" range="{{sexPicker}}" bindchange="bindSexChange">
+      <view class="picker">
+        {{editForm.sex || '请选择性别'}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">手机号码</view>
+    <input name="phone" placeholder="请输入手机号" value="{{editForm.phone}}" class="radius"></input>
+  </view>
+  <view class="text-lg padding text-grey">填写拼车信息</view>
+  <view class="cu-form-group">
+    <view class="title">拼车类型</view>
+    <picker name="type" value="{{editForm.type}}" range="{{typePicker}}" bindchange="bindTypeChange">
+      <view class="picker">
+        {{editForm.type || '请选择拼车类型'}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">出发地</view>
+    <input name="start" placeholder="请输入出发地" value="{{editForm.start}}" class="radius"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">目的地</view>
+    <input name="over" placeholder="请输入目的地" value="{{editForm.over}}" class="radius"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">日期选择</view>
+    <picker name="date" mode="date" value="{{editForm.date}}" start="{{minDate}}" end="{{maxDate}}" bindchange="bindDateChange">
+      <view class="picker">
+        {{editForm.date}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">时间选择</view>
+    <picker name="time" mode="time" value="{{editForm.time}}" start="00:00" end="24:00" bindchange="bindTimeChange">
+      <view class="picker">
+        {{editForm.time}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">价格</view>
+    <input name="price" placeholder="请输入价格" value="{{editForm.price}}" class="radius"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">车型</view>
+    <input name="carType" placeholder="请输入车型" value="{{editForm.carType}}" class="radius"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">空位</view>
+    <picker name="surplus" value="{{editForm.surplus}}" range="{{sitPicker}}" bindchange="bindSurplusChange">
+      <view class="picker">
+        {{editForm.surplus || '请选择剩余空位'}}
+      </view>
+    </picker>
+  </view>
+  <view class="text-lg padding text-grey">其他信息</view>
+  <view class="cu-form-group">
+    <textarea name="desc" placeholder="更多情况，请输入说明" value="{{editForm.desc}}" maxlength="-1" placeholder-class="placeholder"></textarea>
+  </view>
+  <view class="padding flex flex-direction">
+    <button class="cu-btn bg-green lg" formType="submit">确认</button>
+  </view>
+</form>

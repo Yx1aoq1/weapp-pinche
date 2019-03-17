@@ -1,0 +1,8 @@
+<import src='/pages/common/cell/cell' />
+
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg">
+  <template is="row-cell" data="{{icon: 'icon-comment', title: '评论'}}"></template>
+  <template is="row-cell" data="{{icon: 'icon-appreciate', title: '赞'}}"></template>
+  <template is="row-cell" data="{{icon: 'icon-notification', title: '系统消息'}}"></template>
+</view>
+  

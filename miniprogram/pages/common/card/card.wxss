@@ -1,0 +1,8 @@
+.card-title {
+  margin-top: 30rpx;
+  font-weight: bold;
+}
+
+.card-time {
+  margin-top: -30rpx;
+}

@@ -1,0 +1,21 @@
+<import src='/pages/common/cell/cell' />
+
+<view class="UCenter-bg">
+  <view class="userinfo">
+    <view class="userinfo-avatar">
+      <image src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <open-data class="userinfo-nickname" type="userNickName" lang="zh_CN"></open-data>
+    <image src='https://image.weilanwl.com/gif/wave.gif' mode='scaleToFill' class='gif-wave'></image>
+  </view>
+</view>
+
+<view class="padding flex text-center text-grey bg-white shadow-warp">
+</view>
+
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg">
+  <template is="row-cell" data="{{icon: 'icon-edit', title: '发布记录'}}"></template>
+  <template is="row-cell" data="{{icon: 'icon-time', title: '我的预约'}}"></template>
+  <template is="row-cell" data="{{icon: 'icon-favorfill', title: '我的收藏'}}"></template>
+  <template is="row-cell" data="{{icon: 'icon-addressbook', title: '个人信息'}}"></template>
+</view>

@@ -1,0 +1,28 @@
+<import src='/pages/common/card/card' />
+
+<view class="container">
+  <view class="main-search">
+    <input value="{{searchForm.start}}" placeholder="始发地" type="text" />
+    <text>→</text>
+    <input value="{{searchForm.over}}" placeholder="目的地" type="text" />
+    <picker mode="date" value="{{searchForm.date}}" start="{{minDate}}" end="{{maxDate}}" bindchange="bindDateChange">
+      <view class="picker">
+        {{searchForm.date}}
+      </view>
+    </picker>
+  </view>
+
+  <tab-switch tabs="{{tabs}}" bindtabChange="bindTabChange"></tab-switch>
+
+  <view class="cu-card article">
+    <template wx:for="{{orderList}}" wx:key="index" is="card" data="{{item}}"></template>
+  </view>
+
+  <view class="main-loadmore main-loadmore_line">
+    <view class="main-loadmore-tip main-loadmore-tip_in-line">没有更多了~</view>
+  </view>
+
+  <navigator url="/pages/index/edit/edit">
+    <view class="main-add cu-avatar round margin-left bg-green icon-edit"></view>
+  </navigator>
+</view>

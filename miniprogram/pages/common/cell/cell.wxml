@@ -1,0 +1,9 @@
+<!--  -->
+<template name="row-cell">
+  <view class="cu-item arrow">
+    <navigator class="content" url="{{url}}" hover-class="none">
+      <text class="{{icon}} text-grey"></text>
+      <text class="text-grey">{{title}}</text>
+    </navigator>
+  </view>
+</template>

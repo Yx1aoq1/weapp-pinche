@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/tabs/index/index",
+    "pages/tabs/msg/msg",
+    "pages/tabs/my/my",
+    "pages/login/login",
+    "pages/index/edit/edit",
+    "pages/index/view/view"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#39b54a",
+    "navigationBarTitleText": "ws拼车",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f7f7f7"
+  },
+  "tabBar": {
+    "color": "#aaa",
+    "selectedColor": "#39b54a",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/tabs/index/index",
+        "iconPath": "/images/tabbar/basics.png",
+        "selectedIconPath": "/images/tabbar/basics_cur.png",
+        "text": "拼车"
+      },
+      {
+        "pagePath": "pages/tabs/msg/msg",
+        "iconPath": "/images/tabbar/plugin.png",
+        "selectedIconPath": "/images/tabbar/plugin_cur.png",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/tabs/my/my",
+        "iconPath": "/images/tabbar/about.png",
+        "selectedIconPath": "/images/tabbar/about_cur.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

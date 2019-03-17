@@ -1,0 +1,15 @@
+<template name="card">
+  <view class="cu-item shadow">
+    <view class="content">
+      <view class="cu-avatar xl round margin" style="background-image:url({{item.createUserInfo.avatarUrl}});"></view>
+      <view class="desc">
+        <view class="card-title">{{item.start}}→{{item.over}}</view>
+        <view class="card-time text-grey">出发：{{item.date}} {{item.time}}</view>
+        <view>
+          <view class='cu-tag bg-red light sm round'>{{item.type}}</view>
+          <view class='cu-tag bg-green light sm round'>{{item.surplus}}空位</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
